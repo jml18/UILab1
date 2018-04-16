@@ -21,6 +21,7 @@
     <string name="toppingSauce">sauce</string>
 
     <string name="submit">Submit</string>
+    <string name="home">Home</string>
 
     <string-array name="auto_complete_colors">
         <item>red</item>

@@ -53,11 +53,24 @@ public class CheckBoxRadioButtonFragment extends Fragment {
     }
 
     private void toastPop(View view) {
-        CheckBox cb = getActivity().findViewById(R.id.checkBoxMeat);
-        String list = "";
+        StringBuffer list = new StringBuffer();
+        getName(R.id.checkBoxMeat, list);
+        getName(R.id.checkBoxCheese, list);
+        getName(R.id.checkBoxSauce, list);
+        getName(R.id.checkBoxVegetables, list);
+        RadioButton rb = getActivity().findViewById(R.id.radioYes);
+        if(rb.isChecked())
         Toast.makeText(getActivity(),
-                cb.getText(),
+                list.toString(),
                 Toast.LENGTH_SHORT).show();
+    }
+
+    private void getName(int id, StringBuffer list) {
+        CheckBox cb = getActivity().findViewById(id);
+        if (cb.isChecked()) {
+            list.append((String) cb.getText());
+            if (list.length() != 0) list.append(",");
+        }
     }
 
     @Override
@@ -76,7 +89,7 @@ public class CheckBoxRadioButtonFragment extends Fragment {
                 getActivity().findViewById(R.id.radioGroup).getBackground();
 
         // Check which radio button was clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.radioYes:
                 if (checked)
                     bg.setColor(getResources().getColor(R.color.yes));
