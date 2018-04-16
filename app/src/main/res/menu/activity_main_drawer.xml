@@ -3,36 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
-    </group>
+    <item
+        android:id="@+id/nav_text_view"
+        android:title="TextView Example"
+        android:icon="@drawable/ic_menu_textview" />
+    <item
+        android:id="@+id/nav_edit_view"
+        android:title="Edit Example"
+        android:icon="@drawable/ic_menu_textview" />
+    <item
+        android:id="@+id/nav_auto_comp_view"
+        android:title="AutoComplete Example"
+        android:icon="@drawable/ic_menu_textview" />
+    <item
+        android:id="@+id/nav_spinner_view"
+        android:title="Spinner Example"
+        android:icon="@drawable/ic_menu_textview" />
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
+    <item
+        android:id="@+id/nav_check_radio_view"
+        android:title="Check/Radio Example"
+        android:icon="@drawable/ic_menu_textview" />
 
 </menu>

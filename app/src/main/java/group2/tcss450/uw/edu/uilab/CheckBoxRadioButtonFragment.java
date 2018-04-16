@@ -54,8 +54,9 @@ public class CheckBoxRadioButtonFragment extends Fragment {
 
     private void toastPop(View view) {
         CheckBox cb = getActivity().findViewById(R.id.checkBoxMeat);
+        String list = "";
         Toast.makeText(getActivity(),
-                "THIS",
+                cb.getText(),
                 Toast.LENGTH_SHORT).show();
     }
 
@@ -86,6 +87,5 @@ public class CheckBoxRadioButtonFragment extends Fragment {
                 break;
         }
     }
-
 
 }

@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if(savedInstanceState == null) {
+        if (savedInstanceState == null) {
             if (findViewById(R.id.fragmentContainer) != null) {
                 getSupportFragmentManager().beginTransaction()
                         .add(R.id.fragmentContainer, new HomeFragment())
@@ -92,19 +92,18 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        if (id == R.id.nav_text_view) {
+            loadFragment(new TextViewFragment());
+        } else if (id == R.id.nav_edit_view) {
+            loadFragment(new EditTextFragment());
+        } else if (id == R.id.nav_auto_comp_view) {
+            loadFragment(new AutoCompleteTextFragment());
+        }else if (id == R.id.nav_spinner_view) {
+            loadFragment(new SpinnerFragment());
+        }else if (id == R.id.nav_check_radio_view) {
+            loadFragment(new CheckBoxRadioButtonFragment());
         }
+
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
